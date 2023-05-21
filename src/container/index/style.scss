@@ -1,0 +1,66 @@
+@use '../../lib/service.scss';
+@use '../../lib/varibles.scss';
+@use '../../component/chatItem/style.scss' as chatItem;
+@use '../../component/costItem/style.scss' as costItem;
+
+.wrapper {
+  display: grid;
+  margin: 30px auto;
+  width: 60%;
+  // викликаючи міксин spacing з файлу service.scss задаємо відступи нашому контейнеру
+
+  @include service.spacing(8);
+}
+
+.container {
+  background-color: #fff;
+  display: grid;
+  padding: 16px 32px;
+  border-radius: 5px;
+}
+
+.title {
+  // використовуючи вкладеність задаємо стилі тегу h3 який знаходиться в елементі з класом .title
+  h3 {
+    font-weight: 600;
+    font-size: 18px;
+    // використовуємо змінні записані в файлі varibles.scss
+    color: varibles.$primary-text;
+  }
+  // використовуючи вкладеність задаємо стилі тегу p який знаходиться в елементі з класом .title
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    // використовуємо змінні записані в файлі varibles.scss
+    color: varibles.$secondary-text;
+  }
+  margin-bottom: 24px;
+}
+
+.divider {
+  height: 1px;
+  width: 90%;
+  background-color: #dee2e6;
+}
+
+.costs-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chats {
+  display: grid;
+  // викликаючи міксин spacing з файлу service.scss задаємо відступи нашому контейнеру
+  @include service.spacing(4);
+}
+
+@media only screen and (max-width: 1300px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
+  }
+}

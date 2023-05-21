@@ -1,0 +1,36 @@
+{{! 
+Це код container файлу для index сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+ }}
+
+<div class='wrapper'>
+  <div class='container'>
+    <div class='title'>
+      <h3>Sales Overview</h3>
+      <p>Overview of Latest Month</p>
+      <div class'divider'></div>
+    </div>
+    <div class="costs-container">
+      {{#each costs}}
+        {{>costItem data=this}}
+      {{/each}}
+    </div>
+  </div>
+  <div class="container">
+    <div class='title'>
+      <h3>Recent Comments</h3>
+      <p>Comments that needs to read</p>
+      <div class'divider'></div>
+    </div>
+    <div class="chats">
+      {{#each chats}}
+        {{>chatItem data=this}}
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}

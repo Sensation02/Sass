@@ -1,0 +1,63 @@
+.cost-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.cost, .earnings, .sales, .ref-earning, .balance {
+  border: 2px solid #f8f8ff;
+}
+
+.balance {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #cef1ef;
+}
+.balance:hover {
+  transition: opacity 1s ease-in;
+  opacity: 0.5;
+}
+
+.ref-earning {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #fddcdf;
+}
+.ref-earning:hover {
+  transition: opacity 1s ease-in;
+  opacity: 0.5;
+}
+
+.sales {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #fcebcc;
+}
+.sales:hover {
+  transition: opacity 1s ease-in;
+  opacity: 0.5;
+}
+
+.earnings {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #d4e0ff;
+}
+.earnings:hover {
+  transition: opacity 1s ease-in;
+  opacity: 0.5;
+}
+
+.cost-info p {
+  font-weight: 400;
+  color: #757e85;
+}
+.cost-info .price {
+  font-weight: 600;
+  font-size: 24px;
+  color: #1e2a35;
+}/*# sourceMappingURL=style.css.map */
